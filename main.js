@@ -1,3 +1,5 @@
+const choices = ["rock", "paper", "scissors"]
+
 function game() {
     // play game
     // play five rounds
@@ -14,4 +16,5 @@ function playerChoice() {
 
 function computerChoice() {
     // get random input from computer
+    return choices[Math.floor(Math.random()*choices.length)]
 }
