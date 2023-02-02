@@ -13,10 +13,13 @@ function playRound() {
 
 function playerChoice() {
     //get input from player
-    let input = prompt('type rock, paper, or scissors');
-    while(input == null) 
+    let input = prompt('Type Rock, Paper, or Scissors');
+    while(input == null) {
+        input = prompt('Type Rock, Paper, or Scissors');
+    }
     // the above keeps the user from hit cancel button and break the game
-    input = input.toLowerCase
+    input = input.toLowerCase();
+    console.log(input);
 
 
 }
