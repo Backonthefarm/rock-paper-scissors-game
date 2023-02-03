@@ -36,14 +36,12 @@ const playRound = (playerSelection, computerSelection) => {
         return 'You Lost! Rock crushes scissors'
 }
 }
-const playerSelection = 'rock';
-
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('choose what to throw')
+        const playerSelection = prompt('choose what to throw', 'Rock, Paper, Scissors').toLowerCase()
         const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection)
+       playRound(playerSelection, computerSelection)
     }
  if (playerScore > compScore) {
     return 'You beat the computer! Your are a genius'
