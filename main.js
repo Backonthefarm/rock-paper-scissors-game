@@ -1,9 +1,7 @@
-const choices = ["rock", "paper", "scissors"]
+const choices = ["rock", "paper", "scissors"];
 
 function game() {
-    // play game
-    // play five rounds
-    // console based
+ 
 }
 
 function playRound() {
@@ -12,20 +10,16 @@ function playRound() {
 }
 
 function playerChoice() {
-    //get input from player
-    let input = prompt('Type Rock, Paper, or Scissors');
-    while(input == null) {
-        input = prompt('Type Rock, Paper, or Scissors');
+
+    let input = prompt("Type Rock, Paper, or Scissors");
+    while (input == null) {
+        input = prompt("Type Rock, Paper, or Scissors");
     }
-    // the above keeps the user from hit cancel button and break the game
     input = input.toLowerCase();
     console.log(input);
-
-
 }
 
 function computerChoice() {
-    // get random input from computer
     return choices[Math.floor(Math.random()*choices.length)]
 }
 
