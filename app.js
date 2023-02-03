@@ -1,4 +1,4 @@
-const computerPlay = () => {
+const getComputerChoice  = () => {
     const arrOfChoices = ['rock', 'paper', 'scissors']
     const randomNum = Math.floor(Math.random() * arrOfChoices.length)
     const compChoice = arrOfChoices[randomNum]
@@ -25,3 +25,8 @@ const playRound = (playerSelection, computerSelection) => {
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'You Lost! Rock crushes scissors'
 }
+}
+const playerSelection = 'rock';
+const computerSelection = getComputerChoice();
+
+console.log(playRound(playerSelection, computerSelection))
