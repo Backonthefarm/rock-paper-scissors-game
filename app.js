@@ -41,9 +41,17 @@ const playerSelection = 'rock';
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt('choose what to throw')
         const computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection)
     }
+ if (playerScore > compScore) {
+    return 'You beat the computer! Your are a genius'
+ } else if (playerScore < compScore) {
+    return 'You got beat by the Computer! Practice your throws!'
+ }  else {
+    return 'You tied with the computer! Not too shabby'
+ }
 }
 
-game()
+console.log(game())
