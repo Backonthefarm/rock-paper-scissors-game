@@ -16,7 +16,7 @@ function playerChoice() {
         input = prompt("Type Rock, Paper, or Scissors");
     }
     input = input.toLowerCase();
-    console.log(input);
+    
 }
 
 function computerChoice() {
