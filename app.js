@@ -43,6 +43,9 @@ const game = () => {
         const computerSelection = getComputerChoice();
        playRound(playerSelection, computerSelection)
     }
+    // while (input == null) {
+    //     input = prompt('choose what to throw', 'Rock, Paper, Scissors')
+    // }
  if (playerScore > compScore) {
     return 'You beat the computer! Your are a genius'
  } else if (playerScore < compScore) {
