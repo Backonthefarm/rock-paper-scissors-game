@@ -40,7 +40,7 @@ const playRound = (playerSelection, computerSelection) => {
 const game = () => {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('choose what to throw', 'Rock, Paper, Scissors').toLowerCase()
-        const computerSelection = getComputerChoice();
+        const computerSelection = getComputerChoice()
        playRound(playerSelection, computerSelection)
     }
     // while (input == null) {
