@@ -8,6 +8,7 @@ const getComputerChoice  = () => {
     return compChoice
 }
 
+
 const playRound = (playerSelection, computerSelection) => {
     // console.log('1', playerSelection, '2', computerSelection)
     if (playerSelection === 'rock' && computerSelection === 'rock') {
@@ -39,13 +40,15 @@ const playRound = (playerSelection, computerSelection) => {
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('choose what to throw', 'Rock, Paper, Scissors').toLowerCase()
+        const playerSelection = prompt('choose what to throw').toLowerCase();
         const computerSelection = getComputerChoice()
-       playRound(playerSelection, computerSelection)
-    }
-    // while (input == null) {
-    //     input = prompt('choose what to throw', 'Rock, Paper, Scissors')
+    //    while (playerSelection == null) {
+    //     playerSelection = prompt('choose what to throw')
     // }
+        playRound(playerSelection, computerSelection)
+    }
+    
+    
  if (playerScore > compScore) {
     return 'You beat the computer! Your are a genius'
  } else if (playerScore < compScore) {
