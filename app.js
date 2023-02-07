@@ -42,9 +42,8 @@ const game = () => {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('choose what to throw').toLowerCase();
         const computerSelection = getComputerChoice()
-    //    while (playerSelection == null) {
-    //     playerSelection = prompt('choose what to throw')
-    // }
+       playerSelection = prompt('Choose what to throw');
+       if (playerSelection == 'null' || playerSelection == null || playerSelection == '');
         playRound(playerSelection, computerSelection)
     }
     
