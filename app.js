@@ -38,20 +38,31 @@ const playRound = (playerSelection, computerSelection) => {
 }
 }
 
-const game = () => {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt('choose what to throw')
-        while (playerSelection == null || playerSelection === "") {
-            playerSelection = prompt('choose what to throw');
-        }
-        playerSelection = playerSelection.toLowerCase();
-        const computerSelection = getComputerChoice();
-        
-        // console.log(playerSelection);
-        playRound(playerSelection, computerSelection) 
-    }
-    // console.log(playerSelection);
+// const game = () => {
+//     for (let i = 0; i < 5; i++) {
+//         const playerSelection = prompt('choose what to throw').toLowerCase();
+//         const computerSelection = getComputerChoice()
+//        while (playerSelection === null) {
+//         playerSelection = prompt('choose what to throw')
+//     }
+//         playRound(playerSelection, computerSelection) 
+//     }
+//     // console.log(playerSelection);
 
+
+    const game = () => {
+        for (let i = 0; i < 5; i++) {
+            let playerSelection = prompt('choose what to throw')
+            while (playerSelection == null || playerSelection === "") {
+                playerSelection = prompt('choose what to throw');
+            }
+            playerSelection = playerSelection.toLowerCase();
+            const computerSelection = getComputerChoice();
+            
+            // console.log(playerSelection);
+            playRound(playerSelection, computerSelection) 
+        }
+        // console.log(playerSelection);
     
  if (playerScore > compScore) {
     return 'You beat the computer! Your are a genius'
