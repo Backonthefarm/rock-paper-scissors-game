@@ -52,9 +52,9 @@ const playRound = (playerSelection, computerSelection) => {
 
     const game = () => {
         for (let i = 0; i < 5; i++) {
-            let playerSelection = prompt('choose what to throw')
+            let playerSelection = prompt('choose what to throw', 'rock, paper, scissors')
             while (playerSelection == null || playerSelection === "") {
-                playerSelection = prompt('choose what to throw');
+                playerSelection = prompt('choose what to throw', 'rock, paper, scissors');
             }
             playerSelection = playerSelection.toLowerCase();
             const computerSelection = getComputerChoice();
