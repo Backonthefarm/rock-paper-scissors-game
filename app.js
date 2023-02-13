@@ -40,13 +40,18 @@ const playRound = (playerSelection, computerSelection) => {
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('choose what to throw').toLowerCase();
-        const computerSelection = getComputerChoice()
-       playerSelection = prompt('Choose what to throw');
-       if (playerSelection == 'null' || playerSelection == null || playerSelection == '');
-        playRound(playerSelection, computerSelection)
+        let playerSelection = prompt('choose what to throw')
+        while (playerSelection == null || playerSelection === "") {
+            playerSelection = prompt('choose what to throw');
+        }
+        playerSelection = playerSelection.toLowerCase();
+        const computerSelection = getComputerChoice();
+        
+        // console.log(playerSelection);
+        playRound(playerSelection, computerSelection) 
     }
-    
+    // console.log(playerSelection);
+
     
  if (playerScore > compScore) {
     return 'You beat the computer! Your are a genius'
